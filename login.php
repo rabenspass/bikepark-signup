@@ -56,20 +56,20 @@ if(isset($errorMessage)) { //if there is an error Message print it
 
 <form action="?login=1" method="post">
 <div class="form-group">
-<label for="username">Username</label>
+<label for="username">Minecraft Username</label>
 <input type="text" class="form-control" size="40" id="username" placeholder="Username" name="username"><br><br>
 </div>
  <div class="form-group">
-<label for="password">Password</label>
+<label for="password">Passwort</label>
 <input type="password" class="form-control" size="40" id="password" placeholder="Password" name="password"><br>
  </div>
  <button type="submit" class="btn btn-primary">Login</button>
 </form> 
 <br />
 <br />
-<a href="forgotpass.php"><button class="btn btn-warning">I forgot my password</button></a>
+<a href="forgotpass.php"><button class="btn btn-warning">Ich habe mein Passwort vergessen</button></a>
 <br /> <br />
-<a href="register.php"><button class="btn btn-info">I need an account first. Please let me register</button></a>
+<a href="register.php"><button class="btn btn-info">Ich brauche noch einen Account</button></a>
 </div>
 </div>
 </div>

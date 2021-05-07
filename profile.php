@@ -106,6 +106,9 @@ if ($profilepicture == 1) { //if admin, print so but in red
 if ($profilepicture == 0) {
     echo '<p class="text-danger">Nein</p>';
 }
+if ($profilepicture == 3) {
+    echo '<p class="text-danger">Nein <a class="text-warning">Anfrage läuft</a></p>';
+}
 echo "<tr>";
 echo "<td>";
 echo "User Level:";
@@ -126,7 +129,7 @@ echo "</tr>";
 <br>
 <br/>
 <br>
-<a href="start.php"><button class="btn btn-info">Back</button></a>
+<a href="start.php"><button class="btn btn-info">Zurück</button></a>
 <br/>
 <br>
 <!--<a href="rawdata.php"><button class="btn btn-black">Raw Data</button></a>-->

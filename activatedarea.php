@@ -24,7 +24,7 @@ if(isset($_GET['notimplemented'])) { //if "?notimplemented=1" is received, print
 //some html links to other pages
 ?>
 <br /><br />
-<a href="changeprofilepicture.php"><button class="btn btn-primary">Prüfe ob ich bereits freigeschaltet bin</button>
+<a href="freischaltenlassen.php"><button class="btn btn-primary">Stelle eine Freischaltanfrage</button>
 <br /><br />
 <a href="?notimplemented=1"><button class="btn btn-primary disabled">Über eine Sperre beschweren!</button></a>
 <br /> <br /><br />

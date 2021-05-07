@@ -10,7 +10,7 @@
 session_start();
 session_destroy();
  
-echo "Logout. Session is now destroyed. Now lets go to the start page.";
+echo "Logout erfolgreich. Gehe zur Startseite";
 
 ?>
 </body>
