@@ -31,9 +31,15 @@ if(isset($_GET['send']) ) { //you know the drill. if theres a "?=send=1" this li
  }
  if($user['profilepicture'] == "3"){ //if your account is already activated:
      $error = '<span class="badge badge-pill badge-warning"><b>Bereits angefragt!</b></span>';
- } else {
+ }
+ if ($user['profilepicture'] == "1"){
+     $error = '<span class="badge badge-pill badge-warning"><b>Bereits freigeschaltet!</b></span>';
+ } 
+ if ($user['profilepicture'] == "2"){
+    $error = '<span class="badge badge-pill badge-warning"><b>Profil gesperrt!</b></span>';
+} else {
  $statement = $pdo->prepare("UPDATE users SET profilepicture = :profilepicture WHERE id = :userid"); //prepare the statement
- $result = $statement->execute(array('activationcode' => "3", 'userid' => $user['id'])); //activationcode in db is sha1 of real activationcode
+ $result = $statement->execute(array('profilepicture' => "3", 'userid' => $user['id'])); //activationcode in db is sha1 of real activationcode
  //now lets compose a mail:
  $mailrcpt = "bikepark-mc@rabenspass.de";  //mail goes to user that should be validated.
  $mailsubject = "Activate the Account of ".$user['username']; //the subject
