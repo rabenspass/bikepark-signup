@@ -28,7 +28,7 @@ $profilepicture = $_SESSION['profilepicture'];
 <?php
 
  //print a info bar with the username
-echo '<div class="alert alert-info" role="alert">Profil von '.$givenName.'</div>';
+echo '<div class="alert alert-info" role="alert">Profil von '.$usergn.'</div>';
 echo "<br/>";
 //lets build a table with infos:
 echo '<table class="table table-dark table-striped" style="width:30%">';
