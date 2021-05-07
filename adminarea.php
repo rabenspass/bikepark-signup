@@ -16,7 +16,7 @@ echo '<div class="alert alert-danger" role="alert">heres the admin world</div>';
 
 echo '<a href="adminarea_useradmin.php"><button class="btn btn-primary">User Admin</button></a>';
 echo '<br /> <br />';
-echo '<a href="adminarea_sessions.php"><button class="btn btn-primary">Session Admin</button></a>';
+echo '<a href="adminarea_sessions.php"><button class="btn btn-primary">Anfragen sehen</button></a>';
 echo '<br /> <br />';
 echo '<a href="adminarea_admins.php"><button class="btn btn-danger">Admin Admin</button></a>';
 echo '<br /> <br />';
