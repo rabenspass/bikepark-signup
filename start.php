@@ -15,7 +15,7 @@ $activated = $_SESSION['activated'];
     <meta name="author" content="">
 
 
-    <title>Login POC</title>
+    <title>Minecraft Bikepark Projekt</title>
 
 
     <link href="ressources/css/bootstrap.min.css" rel="stylesheet">
@@ -25,23 +25,23 @@ $activated = $_SESSION['activated'];
   <body>
 
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-      <h5 class="my-0 mr-md-auto font-weight-normal">Crappy Login POC</h5>
+      <h5 class="my-0 mr-md-auto font-weight-normal">Minecraft Bikepark</h5>
       <nav class="my-2 my-md-0 mr-md-3">
 
-        <a class="p-2 text-dark" href="https://github.com/td00/loginpagefoo">Git</a>
+        <a class="p-2 text-dark" href="https://github.com/rabenspass/bikepark-signup">Fork me on GitHub</a>
         <?php
       if($userid > 0){ //if the user is logged in (has a userid above 0) then print this:
         echo 'Hi <a href="profile.php">'.$_SESSION['username'].'</a>';  
       }else{ //if there isn't a user session print a register button instead
-      echo '<a class="p-2 text-dark" href="register.php">Register</a>';
+      echo '<a class="p-2 text-dark" href="register.php">Registrieren</a>';
     }
       ?>
       </nav>
       <?php
       if($userid > 0){ //if the user is logged in (has a userid above 0) print a logout button
-        echo '<a class="btn btn-outline-primary" href="logout.php">Sign Out</a>';  
+        echo '<a class="btn btn-outline-primary" href="logout.php">Ausloggen</a>';  
       }else{ //if there isn't a user session print a login button
-      echo '<a class="btn btn-outline-primary" href="login.php">Sign In</a>';
+      echo '<a class="btn btn-outline-primary" href="login.php">Einloggen</a>';
     }
       ?>
     </div>
@@ -50,8 +50,8 @@ $activated = $_SESSION['activated'];
     echo '<div class="alert alert-danger" role="alert">Your account isnt activated yet!</div><br>';
 }?>
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4">loginpagefoo POC (PHP & MySQL)</h1>
-      <p class="lead">Just a crappy POC written in PHP using PHP, HTML & MySQL.</p>
+      <h1 class="display-4">bikepark.rabenspass.de Registrierung</h1>
+      <p class="lead">Registriere dich hier um mit uns deinen Traum Bikepark zu konzipieren.</p>
     </div>
 
     <div class="container">
@@ -61,13 +61,13 @@ $activated = $_SESSION['activated'];
         ?>
         <div class="card mb-4 box-shadow">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Profile</h4>
+        <h4 class="my-0 font-weight-normal">Profil</h4>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mt-3 mb-4">
-          <li>Your Profile</li>
+          <li>Dein Profil</li>
         </ul>
-        <a href="profile.php"><button type="button" class="btn btn-lg btn-block btn-primary">Profile</button></a>
+        <a href="profile.php"><button type="button" class="btn btn-lg btn-block btn-primary">Profil</button></a>
       </div>
     </div>
         <?php  
@@ -75,13 +75,13 @@ $activated = $_SESSION['activated'];
       ?>
       <div class="card mb-4 box-shadow">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Register</h4>
+        <h4 class="my-0 font-weight-normal">Registrieren</h4>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mt-3 mb-4">
-          <li>If you don't have a user already.</li>
+          <li>Wenn du noch keinen Account hast.</li>
         </ul>
-        <a href="register.php"><button type="button" class="btn btn-lg btn-block btn-primary">Sign up for free</button></a>
+        <a href="register.php"><button type="button" class="btn btn-lg btn-block btn-primary">Registriere dich hier</button></a>
       </div>
     </div>
       <?php
@@ -92,18 +92,18 @@ $activated = $_SESSION['activated'];
         ?>
         <div class="card mb-4 box-shadow">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Already activated?</h4>
+        <h4 class="my-0 font-weight-normal">Bereits aktiviert?</h4>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mt-3 mb-4">
-          <li>Show the Activated Area</li>
+          <li>Pr&uuml;fe ob du schon freigeschaltet bist.</li>
         </ul>
         <?php
         if ($activated == 0) { //check if the user is activated. if not, disable the button.
-    echo '<a href="?activation_req=1"><button class="btn btn-primary disabled">Activated Area</button></a>';
+    echo '<a href="?activation_req=1"><button class="btn btn-primary disabled">Freischalt Bereich</button></a>';
 }
 if ($activated == 1) { //if enabled, than activate the button & give it a real function.
-    echo '<a href="activatedarea.php"><button class="btn btn-lg btn-block btn-primary">Activated Area</button></a>';
+    echo '<a href="activatedarea.php"><button class="btn btn-lg btn-block btn-primary">Freischalt Bereich</button></a>';
 }?>
       </div>
     </div>
@@ -116,9 +116,9 @@ if ($activated == 1) { //if enabled, than activate the button & give it a real f
           </div>
           <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
-              <li>If you want to access your profile</li>
+              <li>Einloggen</li>
             </ul>
-            <a href="login.php"><button type="button" class="btn btn-lg btn-block btn-primary">Login</button></a>
+            <a href="login.php"><button type="button" class="btn btn-lg btn-block btn-primary">Einloggen</button></a>
           </div>
         </div>
       <?php
@@ -129,13 +129,13 @@ if ($activated == 1) { //if enabled, than activate the button & give it a real f
         ?>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Reset Password</h4>
+            <h4 class="my-0 font-weight-normal">Passwort zurücksetzen</h4>
           </div>
           <div class="card-body">
               <ul class="list-unstyled mt-3 mb-4">
-              <li>The only way to change your password right now.. :/<br /> Needs a valid Mail Address.</li>
+              <li>Lasse hier dein Passwort zurücksetzen.</li>
             </ul>
-            <a href="forgotpass.php"<button type="button" class="btn btn-lg btn-block btn-outline-primary">Forgot (Change) Password</button></a>
+            <a href="forgotpass.php"<button type="button" class="btn btn-lg btn-block btn-outline-primary">Passwort vergessen</button></a>
           </div>
         </div>
       </div>
@@ -144,13 +144,13 @@ if ($activated == 1) { //if enabled, than activate the button & give it a real f
       ?>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Reset Password</h4>
+            <h4 class="my-0 font-weight-normal">Passwort ändern</h4>
           </div>
           <div class="card-body">
               <ul class="list-unstyled mt-3 mb-4">
-              <li>When your login details went missing</li>
+              <li>Das selbe wie Passwort vergessen. Braucht einen aktivierten Account!</li>
             </ul>
-            <a href="forgotpass.php"<button type="button" class="btn btn-lg btn-block btn-outline-primary">Forgot Password</button></a>
+            <a href="forgotpass.php"<button type="button" class="btn btn-lg btn-block btn-outline-primary">Passwort ändern</button></a>
           </div>
         </div>
       </div>
@@ -170,27 +170,24 @@ if ($isadmin == 1) { //if admin rights are granted, print a admin area button
         <div class="row">
           <div class="col-12 col-md">
             <img class="mb-2" src="https://web.td00.de/woddle.gif" alt="" >
-            <small class="d-block mb-3 text-muted">&copy; NO RIGHTS RESERVED! 2020</small>
+            <small class="d-block mb-3 text-muted">&copy; NO RIGHTS RESERVED! 2021</small>
           </div>
           <div class="col-6 col-md">
-            <h5>Features</h5>
+            <h5>Mehr</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="https://github.com/td00/loginpagefoo/blob/main/FEATURES.MD#password-login">Password Login</a></li>
-              <li><a class="text-muted" href="https://github.com/td00/loginpagefoo/blob/main/FEATURES.MD#password-login">PHP Session</a></li>
-              <li><a class="text-muted" href="https://github.com/td00/loginpagefoo/blob/main/FEATURES.MD#password-login">Logout</a></li>
-              <li><a class="text-muted" href="https://github.com/td00/loginpagefoo/blob/main/FEATURES.MD#password-login">Forget password</a></li>
-              <li><a class="text-muted" href="https://github.com/td00/loginpagefoo/blob/main/FEATURES.MD#password-login">Password complexibility check</a></li>
-              <li><a class="text-muted" href="https://github.com/td00/loginpagefoo/blob/main/FEATURES.MD#password-login">More to come</a></li>
-            </ul>
+              
+              <li><a class="text-muted" href="https://thiesmueller.de">Software & Infrastruktur</a></li>
+              <li><a class="text-muted" href="https://bikepark.rabenspass.de">Über das Projekt</a></li>
+              <li><a class="text-muted" href="https://rabenspass.de">Rabenspass</a></li>
+                  </ul>
           </div>
       
           <div class="col-6 col-md">
-            <h5>About</h5>
+            <h5>Über</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="https://thiesmueller.de">Me</a></li>
-              <li><a class="text-muted" href="https://github.com/td00/loginpagefoo">Git</a></li>
-              <li><a class="text-muted" href="https://thiesmueller.de/dsgvo/datenschmutz.html">Privacy</a></li>
-              <li><a class="text-muted" href="https://thiesmueller.de/impress/">Imprint</a></li>
+              <li><a class="text-muted" href="https://github.com/rabenspass/bikepark-signup">GitHub Projekt</a></li>
+              <li><a class="text-muted" href="https://rabenspass.de/datenschutzerklaerung">Datenschutzerklaerung</a></li>
+              <li><a class="text-muted" href="https://rabenspass.de/impressum/">Impressum</a></li>
             </ul>
           </div>
         </div>

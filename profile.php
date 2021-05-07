@@ -23,26 +23,18 @@ $profilepicture = $_SESSION['profilepicture'];
 </head>
 <body>
 <script src="ressources/js/bootstrap.min.js"></script>
-<div class="float-right">
-    <br />
-    <br />
-    <?php
-    echo '<img src="'.$profilepicture.'" height=90 width=90 />';
-    
-    ?>
-</div>
 
 
 <?php
 
  //print a info bar with the username
-echo '<div class="alert alert-info" role="alert">Profile of '.$username.'</div>';
+echo '<div class="alert alert-info" role="alert">Profil von '.$givenName.'</div>';
 echo "<br/>";
 //lets build a table with infos:
 echo '<table class="table table-dark table-striped" style="width:30%">';
 echo "<tr>";
 echo "<td>";
-echo "Username";
+echo "Minecraft Username";
 echo "</td>";
 echo "<td>";
 echo $username;
@@ -58,7 +50,7 @@ echo "</td>";
 echo "</tr>";
 echo "<tr>";
 echo "<td>";
-echo "given Name";
+echo "Name";
 echo "</td>";
 echo "<td>";
 echo $usergn;
@@ -66,7 +58,7 @@ echo "</td>";
 echo "</tr>";
 echo "<tr>";
 echo "<td>";
-echo "lastName";
+echo "Dein Ort";
 echo "</td>";
 echo "<td>";
 echo $userln;
@@ -92,21 +84,35 @@ echo "User Status:";
 echo "</td>";
 echo "<td>";
 if ($activated == 0) { //if not activated print it in red and render a activation link
-    echo '<p class="text-danger">Not Activated!</p><br>';
+    echo '<p class="text-danger">Noch nicht aktiviert!</p><br>';
     echo 'Click <a href="activation.php">here</a> to activate';
 }
 if ($activated == 1) { //if activated print so, but in green
-    echo '<p class="text-success">Activated!</p>';
+    echo '<p class="text-success">Aktiviert!</p>';
 }
 echo "</td>";
 echo "</tr>";
+echo "<tr>";
+echo "<td>";
+echo "Auf Server aktiviert:";
+echo "</td>";
+echo "<td>";
+if ($profilepicture == 2) { //if not admin, print "User" in green
+    echo '<p class="text-warning">Gesperrt</p><br>';
+}
+if ($profilepicture == 1) { //if admin, print so but in red
+    echo '<p class="text-success">Ja</p>';
+}
+if ($profilepicture == 0) {
+    echo '<p class="text-danger">Nein</p>';
+}
 echo "<tr>";
 echo "<td>";
 echo "User Level:";
 echo "</td>";
 echo "<td>";
 if ($isadmin == 0) { //if not admin, print "User" in green
-    echo '<p class="text-success">User</p><br>';
+    echo '<p class="text-success">Nutzer</p><br>';
 }
 if ($isadmin == 1) { //if admin, print so but in red
     echo '<p class="text-danger">Admin</p>';

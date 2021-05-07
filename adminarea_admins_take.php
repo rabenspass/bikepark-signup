@@ -30,11 +30,11 @@ if(isset($_GET['user']) ) {
 
 
  //check if theres a code already
- $statement = $pdo->prepare("UPDATE users SET isadmin = '0' WHERE id = :userid");
+ $statement = $pdo->prepare("UPDATE users SET profilepicture = '2' WHERE id = :userid");
  $result = $statement->execute(array('userid' => $user['id']));
  
 
- echo '<div class="alert alert-success" role="alert">Successfully took the ADMIN rights from ';
+ echo '<div class="alert alert-success" role="alert">Successfully took the Game rights from ';
  echo $user['username'];
  echo '</div>';
  $showForm = false;

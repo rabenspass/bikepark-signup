@@ -31,13 +31,13 @@ if(isset($_GET['user']) ) {
 
 
  //check if theres a code already
- $statement = $pdo->prepare("UPDATE users SET isadmin = '1' WHERE id = :userid");
+ $statement = $pdo->prepare("UPDATE users SET profilepicture = '1' WHERE id = :userid");
  $result = $statement->execute(array('userid' => $user['id']));
  
 
  echo '<div class="alert alert-success" role="alert">Successfully granted ';
  echo $user['username'];
- echo ' ADMIN rights.</div>';
+ echo ' Game rights.</div>';
  $showForm = false;
  }
  }
@@ -46,7 +46,7 @@ if(isset($_GET['user']) ) {
 if($showForm):
 ?>
  
-<h1>Give Admin Rights!</h1>
+<h1>Give Game Rights!</h1>
 Please enter the username below.<br><br>
  
 <?php

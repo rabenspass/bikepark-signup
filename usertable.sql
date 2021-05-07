@@ -13,6 +13,6 @@ CREATE TABLE `users` (
   `isadmin` VARCHAR(1) NULL ,
   `passwordcode` VARCHAR(255) NULL ,
   `passwordcode_time` TIMESTAMP NULL ,
-  `profilepicture` VARCHAR(255) NULL DEFAULT 'https://web.td00.de/woddle.gif' ,
+  `profilepicture` VARCHAR(255) NULL DEFAULT '0' ,
   PRIMARY KEY (`id`), UNIQUE (`email`), UNIQUE (`username`)
 ) ENGINE = InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

@@ -110,35 +110,35 @@ if($showFormular) { //this prints the form which begins after the closing bracke
 <form action="?register=1" method="post">
 
 <div class="form-group">
-<label for="email">Email address</label>
+<label for="email">Email Adresse</label>
 <input type="email" class="form-control" size="40" id="email" placeholder="invalid@example.com" name="email">
 </div>
 
 <div class="form-group">
-<label for="username">Username</label>
+<label for="username">Minecraft Username</label>
 <input type="text" class="form-control" size="40" id="username" placeholder="Username" name="username">
 </div>
 
 <div class="form-group">
-<label for="givenName">Given Name</label>
-<input type="text" class="form-control" size="40" id="givenName" placeholder="Martha" name="givenName">
+<label for="givenName">Name</label>
+<input type="text" class="form-control" size="40" id="givenName" placeholder="Martha Musterfrau" name="givenName">
 </div>
 <div class="form-group">
-<label for="lastName">Family Name</label>
+<label for="lastName">Stadt/Ort</label>
 <input type="text" class="form-control" size="40" id="lastName" placeholder="Musterfrau" name="lastName">
 </div>
 
 <div class="form-group">
-<label for="password">Password</label>
+<label for="password">Passwort</label>
 <input type="password" class="form-control" size="40" id="password" placeholder="Please enter password" name="password">
 </div>
 
 <div class="form-group"> 
-<label for="password_confirm">Password (again):</label>
+<label for="password_confirm">Passwort (best&auml;tigen)):</label>
 <input type="password" class="form-control" id="password_confirm" size="40" name="password_confirm" placeholder="Please confirm password">
 </div>
  
-<button type="submit" class="btn btn-primary">Register</button>
+<button type="submit" class="btn btn-primary">Registrieren</button>
 
 </form>
  </div></div>
