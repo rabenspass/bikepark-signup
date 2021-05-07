@@ -31,7 +31,7 @@ if(mysqli_connect_errno()){
 }
 
 //get results from database
-$result = mysqli_query($connection,"SELECT * FROM users WHERE profilepicture="3");
+$result = mysqli_query($connection,'SELECT * FROM users WHERE profilepicture="3"');
 $all_property = array();  //declare an array for saving property
 
 //showing property
