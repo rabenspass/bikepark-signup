@@ -29,13 +29,13 @@ if(isset($_GET['send']) ) { //you know the drill. if theres a "?=send=1" this li
  if($user['username'] == ""){ //if you've managed to create a user without username, print an error.
     $error = '<span class="badge badge-pill badge-warning"><b>no user found</b></span>';
  }
- if($user['profilepicture'] == "3"){ //if your account is already activated:
+ if($user['profilepicture'] == 3){ //if your account is already activated:
      $error = '<span class="badge badge-pill badge-warning"><b>Bereits angefragt!</b></span>';
  }
- if ($user['profilepicture'] == "1"){
+ if ($user['profilepicture'] == 1){
      $error = '<span class="badge badge-pill badge-warning"><b>Bereits freigeschaltet!</b></span>';
  } 
- if ($user['profilepicture'] == "2"){
+ if ($user['profilepicture'] == 2){
     $error = '<span class="badge badge-pill badge-warning"><b>Profil gesperrt!</b></span>';
 } else {
  $statement = $pdo->prepare("UPDATE users SET profilepicture = :profilepicture WHERE id = :userid"); //prepare the statement
