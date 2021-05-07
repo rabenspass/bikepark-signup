@@ -129,13 +129,13 @@ if ($activated == 1) { //if enabled, than activate the button & give it a real f
         ?>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Passwort zurücksetzen</h4>
+            <h4 class="my-0 font-weight-normal">Passwort ändern</h4>
           </div>
           <div class="card-body">
               <ul class="list-unstyled mt-3 mb-4">
-              <li>Lasse hier dein Passwort zurücksetzen.</li>
+              <li>Das selbe wie Passwort vergessen. Braucht einen aktivierten Account!</li>
             </ul>
-            <a href="forgotpass.php"<button type="button" class="btn btn-lg btn-block btn-outline-primary">Passwort vergessen</button></a>
+            <a href="forgotpass.php"<button type="button" class="btn btn-lg btn-block btn-outline-primary">Passwort ändern</button></a>
           </div>
         </div>
       </div>
@@ -144,13 +144,13 @@ if ($activated == 1) { //if enabled, than activate the button & give it a real f
       ?>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Passwort ändern</h4>
+            <h4 class="my-0 font-weight-normal">Passwort zurücksetzen</h4>
           </div>
           <div class="card-body">
               <ul class="list-unstyled mt-3 mb-4">
-              <li>Das selbe wie Passwort vergessen. Braucht einen aktivierten Account!</li>
+              <li>Lasse hier dein Passwort zurücksetzen</li>
             </ul>
-            <a href="forgotpass.php"<button type="button" class="btn btn-lg btn-block btn-outline-primary">Passwort ändern</button></a>
+            <a href="forgotpass.php"<button type="button" class="btn btn-lg btn-block btn-outline-primary">Passwort zurücksetzen</button></a>
           </div>
         </div>
       </div>
