@@ -38,6 +38,6 @@ if ($ingamestatus == 1) { //if enabled, than activate the button & give it a rea
 <br /><br />
 <a href="?notimplemented=1"><button class="btn btn-primary disabled">Über eine Sperre beschweren!</button></a>
 <br /> <br /><br />
-<a href="start.php"><button class="btn btn-info">Back</button></a>
+<a href="start.php"><button class="btn btn-info">Back</button></a><a> </a><a href="update.php?page=activatedarea.php"><button class="btn btn-warning">Aktualisieren</button></a>
 </div>
 </div>
