@@ -9,7 +9,7 @@
 <?php
 session_start(); //check for a session
 if($_SESSION['activated'] == 0) { //check if the account is activated, if not, die with an error
-    die ("Noch nicht aktiviert!");
+    die ("Dein Account ist noch nicht aktiviert!");
 }
 $ingamestatus = $_SESSION['profilepicture'];
 ?>

@@ -52,8 +52,8 @@ if(isset($_GET['send']) ) { //you know the drill. if theres a "?=send=1" this li
  $result = $statement->execute(array('activationcode' => sha1($activationcode), 'userid' => $user['id'])); //activationcode in db is sha1 of real activationcode
  //now lets compose a mail:
  $mailrcpt = $user['email'];  //mail goes to user that should be validated.
- $mailsubject = "Activate the Account of ".$user['username']; //the subject
- $from = "From: Account Activation Service <activatemyaccount@".$_SERVER['HTTP_HOST'].">"; //send mail from "activatemyaccount@%urlyourusingtoaccessthisscript%"
+ $mailsubject = "Minecraft Account ".$user['username']." aktivieren."; //the subject
+ $from = "From: Rabenspass Bikepark <activatemyaccount@".$_SERVER['HTTP_HOST'].">"; //send mail from "activatemyaccount@%urlyourusingtoaccessthisscript%"
  $url_activationcode = 'https://'.$_SERVER['HTTP_HOST'].'/signup/activate.php?userid='.$user['id'].'&code='.$activationcode; //url for activation is https://%urlyourusingtoaccessthisscript%/activate.php?userid=$userid&code=$activationcode
  //thats the content of the mail:
  $text = 'Hallo '.$user['username'].', 
@@ -61,7 +61,7 @@ Bitte logge dich in den nächsten 24 Stunden ueber diesen Link ein:
 '.$url_activationcode.'
  
 
-cheers
+Viele Gruesse
 Rabenspass Bikepark Projekt';
  mail($mailrcpt, $mailsubject, $text, $from); //sending the mail with the build-in mail function.
  
@@ -84,7 +84,7 @@ if(isset($error) && !empty($error)) {
 ?>
  <script src="ressources/js/bootstrap.min.js"></script>
 <form action="?send=1" method="post">
-<button type="submit" class="btn btn-primary">Click to send activation notice</button>
+<button type="submit" class="btn btn-primary">Klicke hier um deinen Account zu aktivieren.</button>
 </form>
  
 <?php
