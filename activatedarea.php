@@ -11,7 +11,7 @@ session_start(); //check for a session
 if($_SESSION['activated'] == 0) { //check if the account is activated, if not, die with an error
     die ("Noch nicht aktiviert!");
 }
-echo "heres the fun world"; //just a placeholder
+$ingamestatus = $_SESSION['profilepicture'];
 ?>
 <br /> <br />
 <div class="jumbotron jumbotron-fluid">
@@ -22,9 +22,21 @@ if(isset($_GET['notimplemented'])) { //if "?notimplemented=1" is received, print
     echo '<div class="alert alert-danger" role="alert">Feature noch nicht existent!</div>';
 }
 //some html links to other pages
-?>
-<br /><br />
+
+if ($ingamestatus == 1) { //if enabled, than activate the button & give it a real function.
+  ?>
+  <br /><br />
+<a href="?disabled=1"><button class="btn btn-success disabled">Du bist bereits freigeschaltet</button>
+<?php
+}?>
+      <?php  
+    }else{ //else print a login field
+    ?>
+      <br /><br />
 <a href="freischaltenlassen.php"><button class="btn btn-primary">Stelle eine Freischaltanfrage</button>
+    <?php
+  }
+?>
 <br /><br />
 <a href="?notimplemented=1"><button class="btn btn-primary disabled">Über eine Sperre beschweren!</button></a>
 <br /> <br /><br />
