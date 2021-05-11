@@ -27,8 +27,6 @@ if ($ingamestatus == 1) { //if enabled, than activate the button & give it a rea
   ?>
   <br /><br />
 <a href="?disabled=1"><button class="btn btn-success disabled">Du bist bereits freigeschaltet</button>
-<?php
-}?>
       <?php  
     }else{ //else print a login field
     ?>
