@@ -54,16 +54,15 @@ if(isset($_GET['send']) ) { //you know the drill. if theres a "?=send=1" this li
  $mailrcpt = $user['email'];  //mail goes to user that should be validated.
  $mailsubject = "Activate the Account of ".$user['username']; //the subject
  $from = "From: Account Activation Service <activatemyaccount@".$_SERVER['HTTP_HOST'].">"; //send mail from "activatemyaccount@%urlyourusingtoaccessthisscript%"
- $url_activationcode = 'https://'.$_SERVER['HTTP_HOST'].'/activate.php?userid='.$user['id'].'&code='.$activationcode; //url for activation is https://%urlyourusingtoaccessthisscript%/activate.php?userid=$userid&code=$activationcode
+ $url_activationcode = 'https://'.$_SERVER['HTTP_HOST'].'/signup/activate.php?userid='.$user['id'].'&code='.$activationcode; //url for activation is https://%urlyourusingtoaccessthisscript%/activate.php?userid=$userid&code=$activationcode
  //thats the content of the mail:
  $text = 'Hallo '.$user['username'].', 
-please use the following URL to activate your account in the next 24h:
+Bitte logge dich in den nächsten 24 Stunden ueber diesen Link ein:
 '.$url_activationcode.'
  
-If this mail comes unsolicited, please just ignore the mail.
- 
+
 cheers
-loginpagefoo script';
+Rabenspass Bikepark Projekt';
  mail($mailrcpt, $mailsubject, $text, $from); //sending the mail with the build-in mail function.
  
  echo 'Link send. Going back to <a href="profile.php">profile</a> page. <meta http-equiv="refresh" content="0; URL=profile.php">'; 
