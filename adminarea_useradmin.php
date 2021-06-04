@@ -53,6 +53,9 @@ while ($row = mysqli_fetch_array($result)) {
 }
 echo "</table>";
 
+echo "<br /> <hr />";
+?>
+<b>Du kannst dir mit <a href="https://bikepark.rabenspass.de/signup/adminarea_profile.php?username=testuser">https://bikepark.rabenspass.de/signup/adminarea_profile.php?username=%username%</a> andere Profile anzeigen lassen.</b>
 echo '<br /> <br />';
 echo '<a href="adminarea.php"><button class="btn btn-info">Back</button></a>';
 ?>
