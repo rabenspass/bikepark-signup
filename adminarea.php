@@ -20,5 +20,7 @@ echo '<a href="adminarea_sessions.php"><button class="btn btn-primary">Anfragen 
 echo '<br /> <br />';
 echo '<a href="adminarea_admins.php"><button class="btn btn-danger">Admin Admin</button></a>';
 echo '<br /> <br />';
+echo '<a href="adminarea_profile.php?username="><button class="btn btn-danger">Other User Profiles</button></a>';
+echo '<br /><br />';
 echo '<a href="start.php"><button class="btn btn-info">Back</button></a>';
 ?>
