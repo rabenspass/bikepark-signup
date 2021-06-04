@@ -1,0 +1,4 @@
+uses: overtrue/phplint@8.0
+with:
+  path: .
+  options: --exclude=*.log
