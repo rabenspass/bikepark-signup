@@ -138,6 +138,6 @@ echo "</tr>";
 <br>
 <br/>
 <br>
-<a href="start.php"><button class="btn btn-info">Zurück</button></a>
+<a href="adminarea.php"><button class="btn btn-info">Zurück</button></a>
 <br/>
 <br>
