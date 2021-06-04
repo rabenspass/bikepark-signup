@@ -1,9 +1,8 @@
-# Login Page POC
+# bikepark.rabenspass.de SIGNUP System
 [![GitHub license](https://img.shields.io/github/license/rabenspass/bikepark-signup)](https://github.com/rabenspass/bikepark-signup/blob/main/LICENSE)
 [![GitHub forks](https://img.shields.io/github/forks/rabenspass/bikepark-signup)](https://github.com/rabenspass/bikepark-signup/network)
 [![GitHub issues](https://img.shields.io/github/issues/rabenspass/bikepark-signup)](https://github.com/rabenspass/bikepark-signup/issues)
 
-[Docker Image](https://github.com/rabenspass/bikepark-signup-docker) (![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rabenspass/bikepark-signup-docker/Docker))
 
 Whitelist Management for Rabenspass Bikepark
 
