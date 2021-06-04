@@ -13,9 +13,9 @@ if($_SESSION['isadmin'] == 0) { //but first a check if you've got admin rights. 
     die ('No rights for you! <meta http-equiv="refresh" content="0; URL=logout.php">');
 } //this is purely a cosmetic effect. no harm could be done from here. it's merely a html page with a little check if you've got the right rights.
 echo '<div class="alert alert-danger" role="alert">heres the admin world</div>';
+echo $_GET['username'];
 
-
-$username = $_GET['user']; //then we get the username from the session
+$username = $_GET['username']; //then we get the username from the session
 
 $statement = $pdo->prepare("SELECT * FROM users WHERE username = :username"); //building a statement & getting the whole line of username = $username
 $result = $statement->execute(array('username' => $username));
@@ -32,7 +32,7 @@ $profilepicture = $user['profilepicture'];
 ?>
 
 <?php
-if(isset($_GET['user'])) { //checks if "?page=" is set in the url
+if(isset($_GET['username'])) { //checks if "?page=" is set in the url
 ?>
 <?php
 
