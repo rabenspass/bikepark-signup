@@ -41,7 +41,7 @@ if(sha1($code) != $user['activationcode']) {
 }
  //activate user:
 if(isset($_GET['send'])) {
-  $statement = $pdo->prepare("UPDATE users SET activated = 1, activationcode = NULL, activationcode_time = NULL WHERE id = :userid");
+  $statement = $pdo->prepare("UPDATE users SET activated = 1, profilepicture = 3, activationcode = NULL, activationcode_time = NULL WHERE id = :userid");
  $result = $statement->execute(array('userid'=> $userid ));
  
  if($result) { //if successfull: die & go to start.php via update.php
