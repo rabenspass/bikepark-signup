@@ -37,6 +37,13 @@ $updatedat = $user['updated_at'];
 $isadmin = $user['isadmin'];
 $profilepicture = $user['profilepicture'];
 
+echo "<br><hr><br>";
+
+echo $user;
+
+echo "<br>";
+
+echo $username;
 
  //print a info bar with the username
 echo '<div class="alert alert-info" role="alert">Profil von '.$usergn.'</div>';
