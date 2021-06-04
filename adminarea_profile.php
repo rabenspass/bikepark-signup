@@ -20,6 +20,10 @@ echo $_GET['username'];
 
 $username = $_GET['username']; //then we get the username from the session
 
+echo "<br><hr><br>";
+
+echo $username;
+
 $statement = $pdo->prepare("SELECT * FROM users WHERE username = :username"); //building a statement & getting the whole line of username = $username
 $result = $statement->execute(array('username' => $username));
 $user = $statement->fetch(); //putting the stuff in an array and afterwards store it in the session:
