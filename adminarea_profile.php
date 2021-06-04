@@ -1,5 +1,6 @@
 <?php 
 session_start();
+include 'backgroundupdate.php';
 ?>
 <html>
 <head>
@@ -18,14 +19,14 @@ echo '<div class="alert alert-danger" role="alert">heres the admin world</div>';
 
 echo $_GET['username'];
 
-$username = $_GET['username']; //then we get the username from the session
+$usernamein = $_GET['username']; //then we get the username from the session
 
 echo "<br><hr><br>";
 
-echo $username;
+echo $usernamein;
 
-$statement = $pdo->prepare("SELECT * FROM users WHERE username = :username"); //building a statement & getting the whole line of username = $username
-$result = $statement->execute(array('username' => $username));
+$statement = $pdo->prepare("SELECT * FROM users WHERE username = :usernamein"); //building a statement & getting the whole line of username = $username
+$result = $statement->execute(array('usernamein' => $usernamein));
 $user = $statement->fetch(); //putting the stuff in an array and afterwards store it in the session:
 $userid = $user['id'];
 $useremail = $user['email'];
