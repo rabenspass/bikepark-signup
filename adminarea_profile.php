@@ -29,12 +29,6 @@ $activated = $user['activated'];
 $updatedat = $user['updated_at'];
 $isadmin = $user['isadmin'];
 $profilepicture = $user['profilepicture'];
-?>
-
-<?php
-if(isset($_GET['username'])) { //checks if "?page=" is set in the url
-?>
-<?php
 
  //print a info bar with the username
 echo '<div class="alert alert-info" role="alert">Profil von '.$usergn.'</div>';
@@ -141,11 +135,3 @@ echo "</tr>";
 <a href="start.php"><button class="btn btn-info">Zurück</button></a>
 <br/>
 <br>
-
-<?php
-
-} else { //if there isn't anything in the header, just die already!
-    die("No user specified"); 
-}
-
-?>
