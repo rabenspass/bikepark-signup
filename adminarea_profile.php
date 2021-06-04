@@ -17,13 +17,9 @@ if($_SESSION['isadmin'] == 0) { //but first a check if you've got admin rights. 
 } //this is purely a cosmetic effect. no harm could be done from here. it's merely a html page with a little check if you've got the right rights.
 echo '<div class="alert alert-danger" role="alert">heres the admin world</div>';
 
-echo $_GET['username'];
 
 $usernamein = $_GET['username']; //then we get the username from the session
 
-echo "<br><hr><br>";
-
-echo $usernamein;
 
 $statement = $pdo->prepare("SELECT * FROM users WHERE username = :usernamein"); //building a statement & getting the whole line of username = $username
 $result = $statement->execute(array('usernamein' => $usernamein));
@@ -38,13 +34,7 @@ $updatedat = $user['updated_at'];
 $isadmin = $user['isadmin'];
 $profilepicture = $user['profilepicture'];
 
-echo "<br><hr><br>";
 
-echo $user;
-
-echo "<br>";
-
-echo $username;
 
  //print a info bar with the username
 echo '<div class="alert alert-info" role="alert">Profil von '.$usergn.'</div>';
