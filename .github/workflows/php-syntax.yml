@@ -1,4 +1,14 @@
-uses: overtrue/phplint@8.0
-with:
-  path: .
-  options: --exclude=*.log
+on: [push]
+
+jobs:
+  checks-syntax:
+  runs-on: ubuntu-latest
+  name: Check PHP Syntax
+  steps:
+  - name: Syntax Check
+    id: phplint
+    uses: overtrue/phplint@8.0
+    with:
+      path: .
+      options: --exclude=*.log
+  
